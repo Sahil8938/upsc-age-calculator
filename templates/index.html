@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UPSC Age Calculator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>UPSC Age Calculator</h1>
+    <form action="/calculate" method="POST">
+      <label for="birth_year">Birth Year (YYYY):</label>
+      <input type="text" id="birth_year" name="birth_year" required>
+      <br>
+      <label for="birth_month">Birth Month (MM):</label>
+      <input type="text" id="birth_month" name="birth_month" required>
+      <br>
+      <label for="birth_day">Birth Day (DD):</label>
+      <input type="text" id="birth_day" name="birth_day" required>
+      <br>
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="General">General</option>
+        <option value="OBC">OBC</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+      </select>
+      <br>
+      <input type="submit" value="Calculate">
+    </form>
+  </div>
+</body>
+</html>
